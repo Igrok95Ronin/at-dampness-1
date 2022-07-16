@@ -1,0 +1,249 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: #3f3f3f;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.containerWidth {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+body {
+  outline: 1px solid red;
+  margin: auto;
+  padding: 0;
+  font: 16px Helvetica, Arial, sans-serif;
+  max-width: 1920px;
+  min-width: 320px;
+  color: #3f3f3f;
+}
+
+.header {
+  background-color: #fff;
+}
+
+.header__box {
+  padding: 20px 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__img {
+  width: 274px;
+  height: 75px;
+}
+
+.header__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.header__link {
+  background-color: #f0506e;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 33px;
+  padding: 0 15px 0 30px;
+  border-radius: 3px;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header__link span::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/telephone-fill.svg);
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.header__link:hover {
+  color: #fff;
+  background-color: #ff002f;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.schimmel {
+  background-image: url(../img/schimmelpilzsanierung-03b981fd.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.schimmel::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.37);
+}
+
+.schimmel__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 800px;
+}
+
+.schimmel__inner {
+  position: relative;
+  color: #fff;
+  max-width: 580px;
+  min-height: 375px;
+  background-color: rgba(1, 49, 128, 0.58);
+  padding: 70px 40px;
+}
+
+.schimmel__title {
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.schimmel__descr {
+  line-height: 25px;
+}
+
+.schimmel__btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  line-height: 35px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 9px 0;
+  text-align: center;
+  margin-top: 50px;
+  display: block;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.schimmel__btn:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.about {
+  padding: 70px 0;
+}
+
+.about__box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.about__left {
+  min-height: 208px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__text {
+  font-size: 19px;
+  line-height: 1.5;
+  margin: 0;
+}
+.about__text span {
+  font-weight: 700;
+}
+
+.about__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about__inner {
+  min-width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.about__inner:hover {
+  background-color: #fff;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.about__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.about__img {
+  max-width: 140px;
+  max-height: 140px;
+}
+
+.about__name {
+  font-size: 19px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 20px 0;
+  text-align: center;
+}

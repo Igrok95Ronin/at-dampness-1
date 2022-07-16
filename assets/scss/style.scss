@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: #3f3f3f;
+}
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.containerWidth {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+$primaryColor: #003180;
+$buttonColor: #f0506e;
+$primaryColorText: #3f3f3f;
+
+body{
+    outline: 1px solid red;
+    margin: auto;
+    padding: 0;
+    font: 16px Helvetica,Arial,sans-serif;
+    max-width: 1920px;
+    min-width: 320px;
+    color: $primaryColorText;
+}
+
+
+.header {
+    background-color: #fff;
+}
+.header__box {
+    padding: 20px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__img {
+    width: 274px;
+    height: 75px;
+}
+.header__img img{
+    width: 100%;
+    height: 100%;
+}
+.header__link {
+    background-color: $buttonColor;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 33px;
+    padding:0 15px 0  30px;
+    border-radius: 3px;
+    position: relative;
+    transition: all .3s;
+    span::before{
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/telephone-fill.svg);
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &:hover {
+        color: #fff;
+        background-color: #ff002f;
+        transition: all .3s;
+    }
+}
+//schimmel
+.schimmel {
+    background-image: url(../img/schimmelpilzsanierung-03b981fd.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.37);;
+    }
+}
+.schimmel__box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 800px;
+}
+.schimmel__inner {
+    position: relative;
+    color: #fff;
+    max-width: 580px;
+    min-height: 375px;
+    background-color: rgb(1 49 128 / 58%);
+    padding: 70px 40px;
+}
+.schimmel__title {
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.schimmel__descr {
+    line-height: 25px;
+}
+.schimmel__btn {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    line-height: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 9px 0;
+    text-align: center;
+    margin-top: 50px;
+    display: block;
+    transition: all .3s;
+    &:hover {
+        color: #000;
+        background-color: #fff;
+    }
+}
+//About
+.about {
+    padding: 70px 0;
+}
+.about__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+.about__left {
+    min-height: 208px;
+    display: flex;
+    align-items: center;
+}
+.about__text {
+    font-size: 19px;
+    line-height: 1.5;
+    span {
+        font-weight: 700;
+    }
+    margin: 0;
+}
+.about__right {
+    display: flex;
+    justify-content: space-between;
+}
+.about__inner {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover {
+    background-color: #fff;
+    border: 1px solid;
+    border-color: rgba(0,0,0,.1);
+    }
+}
+.about__img img {
+    width: 100%;
+    height: 100%;
+}
+.about__img {
+    max-width: 140px;
+    max-height: 140px;
+}
+.about__name {
+    font-size: 19px;
+    line-height: 1.4;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px 0;
+    text-align: center;
+}
