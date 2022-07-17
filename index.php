@@ -4,8 +4,8 @@ $site_data      = json_decode(file_get_contents('http://templates.jquery.link/ap
 $phone_name     = $site_data['phone_name'];
 $phone_href     = $site_data['phone_href'];
 
-$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Entrumpelung'));
-$city           = str_replace('+', ' ', trim($_GET['n'] ?? 'in der nahe'));
+$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'SCHIMMELPILZSANIERUNG'));
+$city           = str_replace('+', ' ', trim($_GET['n'] ?? ''));
 
 $title = $text . ' ' . $city;
 ?>
@@ -19,7 +19,9 @@ $title = $text . ' ' . $city;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <?= $site_data['html'] ?>
-    <title><?= $title ?></title>
+    <title>
+        <?= $title ?>
+    </title>
 </head>
 
 <body>
@@ -33,7 +35,7 @@ $title = $text . ' ' . $city;
                         <div class="header__img">
                             <img src="assets/img/JLiiGLIJYz_U.jpeg" alt="">
                         </div>
-                        <a href="" class="header__link"><span>111222333</span></a>
+                        <a href="<?= $phone_href ?>" class="header__link"><span><?= $phone_name  ?></span></a>
                     </div>
                 </div>
             </div>
@@ -46,11 +48,11 @@ $title = $text . ' ' . $city;
                     <div class="col-12 container">
                         <div class="schimmel__box">
                             <div class="schimmel__inner">
-                                <h1 class="schimmel__title">SCHIMMELPILZSANIERUNG</h1>
+                                <h1 class="schimmel__title"><?= $title ?></h1>
                                 <p class="schimmel__descr">Feuchtigkeit in der Wand oder anderen Bauteilen bemerken Sie
                                     im Anfangsstadium nur als Flecken, die sich langsam ausbreiten. Werden an diesen
                                     Stellen dunkle Punkte sichtbar, handeln Sie schnell!</p>
-                                <a class="schimmel__btn" href="">24/7 Notfall Hotline</a>
+                                <a class="schimmel__btn" href="<?= $phone_href ?>">24/7 Notfall Hotline</a>
                             </div>
                         </div>
                     </div>
@@ -111,16 +113,16 @@ $title = $text . ' ' . $city;
                     <div class="col-12 containerWidth">
                         <div class="gallery__box">
                             <div class="gallery__img">
-                                <img src="assets/img/1photo-1524693220625-1ce88de88992-scaled-263f7397.webp" alt="">
+                                <img src="assets/img/1photo-1524693220625-1ce88de88992-scaled-263f7397.jpg" alt="">
                             </div>
                             <div class="gallery__img">
-                                <img src="assets/img/2photo-1546816077-623b4eaab352-scaled-3e7a1a0e.webp" alt="">
+                                <img src="assets/img/2photo-1546816077-623b4eaab352-scaled-3e7a1a0e.jpg" alt="">
                             </div>
                             <div class="gallery__img">
-                                <img src="assets/img/3photo-1529316738131-4d0e0761a38e-scaled-36d6155f.webp" alt="">
+                                <img src="assets/img/3photo-1529316738131-4d0e0761a38e-scaled-36d6155f.jpg" alt="">
                             </div>
                             <div class="gallery__img">
-                                <img src="assets/img/4photo-1528306479382-7645f5db559f-scaled-2646f035.webp" alt="">
+                                <img src="assets/img/4photo-1528306479382-7645f5db559f-scaled-2646f035.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -197,7 +199,7 @@ $title = $text . ' ' . $city;
                     <div class="col-12 containerWidth">
                         <div class="old__box">
                             <div class="old__img">
-                                <img src="assets/img/000photo-1611941888750-59b178dfc7ee-scaled-5c8d99a0.webp" alt="">
+                                <img src="assets/img/000photo-1611941888750-59b178dfc7ee-scaled-5c8d99a0.jpg" alt="">
                             </div>
                             <div class="old__content">
                                 <h2 class="old__title">DIE GEBÄUDETROCKNUNG NACH EINEM WASSERSCHADEN IN ALTBAUTEN</h2>
@@ -209,7 +211,7 @@ $title = $text . ' ' . $city;
                                     Vliestapeten oder Latex-Anstriche, die eine Diffusion verhindern. Auch Bodenbeläge
                                     aus Kunststoffen wie PVC müssen vor einer Gebäudetrocknung bei Wasserschaden
                                     entfernt werden.</p>
-                                <a href="" class="header__link header__link--font"><span>111222333</span></a>
+                                <a href="<?= $phone_href  ?>" class="header__link header__link--font"><span><?= $phone_name  ?></span></a>
                             </div>
                         </div>
                     </div>
@@ -275,24 +277,56 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
+        <section class="forms">
+            <div class="container-fluid">
+                <div class="row">
+                    <h2 class="forms__title">Kontaktieren Sie uns:</h2>
+                    <div class="col-12 container">
+                        <div class="forms__box">
+                            <form id="jq_form" class="mt-5">
+                                <div class="my-3">
+                                    <input class="form-control" placeholder="Vorname" name="jq_name" type="text">
+                                    <div id="jq_name" style="font-weight:700;font-size:15px;color:red;padding-top:2px;display:none">Dies ist ein Pflichtfeld.</div>
+                                </div>
+                                <div class="my-4">
+                                    <input class="form-control" placeholder="Telefon" name="jq_phone" type="text">
+                                    <div id="jq_phone" style="font-weight:700;font-size:15px;color:red;padding-top:2px;display:none">Dies ist ein Pflichtfeld.</div>
+                                </div>
+                                <div class="my-4">
+                                    <input class="form-control" placeholder="Straße" name="jq_street" type="text">
+                                </div>
+                                <div class="my-4">
+                                    <input class="form-control" placeholder="PLZ / Ort" name="jq_city" type="text">
+                                </div>
+                                <div class="my-4">
+                                    <input class="form-control" placeholder="E-Mail" name="jq_email" type="text">
+                                </div>
+                                <div class="my-4">
+                                    <textarea rows="3" class="form-control" name="jq_text" placeholder="Nachricht"></textarea>
+                                    <div id="jq_text" style="font-weight:700;font-size:15px;color:red;padding-top:2px;display:none">Dies ist ein Pflichtfeld.</div>
+                                </div>
+                                <div>
+                                    <input class="btn  text-uppercase fw-bold mb-5 px-3 py-2 forms__button" type="submit" id="jq_submit" value="Senden">
+                                </div>
+                                <div id="jq_success" style="display:none">Vielen Dank für deine Nachricht. Sie wurde
+                                    gesendet.</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <!--Нижний колонтитул страницы-->
     <footer class="footer">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 container">footer</div>
-            </div>
-        </div>
-        <!-- Навигационные ссылки -->
-        <nav class="footer-nav">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 container">...</div>
+                <div class="col-12">
+                    <span>2022</span>
                 </div>
             </div>
-        </nav>
+        </div>
+
     </footer>
-    <!--Style-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 </body>
