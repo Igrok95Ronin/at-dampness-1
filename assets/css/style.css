@@ -9,6 +9,13 @@ a {
   color: #3f3f3f;
 }
 
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -409,12 +416,12 @@ body {
 }
 
 .header__link--font {
-  background-color: #003180;
+  background-color: #f0506e;
   color: #fff;
   border: 1px solid transparent;
 }
 .header__link--font:hover {
-  background-color: #002767;
+  background-color: red;
 }
 
 .services {
@@ -615,7 +622,7 @@ body {
     margin: 7px;
   }
   .header__link--font {
-    background-color: #003180;
+    background-color: #f0506e;
     color: #fff;
     width: 100%;
     text-align: center;
@@ -623,7 +630,7 @@ body {
     border: 1px solid transparent;
   }
   .header__link--font:hover {
-    background-color: #002767;
+    background-color: red;
   }
   .header__link--font span {
     position: relative;

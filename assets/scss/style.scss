@@ -342,11 +342,11 @@ body{
     margin-bottom: 50px;
 }
 .header__link--font {
-    background-color: $primaryColor;
+    background-color: $buttonColor;
     color: #fff;
     border: 1px solid transparent;
     &:hover {
-        background-color: #002767;
+        background-color: red;
     }
 }
 //services
@@ -520,14 +520,14 @@ body{
     }
     
     .header__link--font {
-        background-color: $primaryColor;
+        background-color: $buttonColor;
         color: #fff;
         width: 100%;
         text-align: center;
         padding: 5px 30px;
         border: 1px solid transparent;
         &:hover {
-            background-color: #002767;
+            background-color: red;
         }
         span {
             position: relative;
